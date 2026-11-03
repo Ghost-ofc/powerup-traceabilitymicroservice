@@ -1,0 +1,26 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: powerup-traceabilitymicroservice
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:27017/traceability_db}
+
+jwt:
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  expiration: 86400000
+
+services:
+  users:
+    url: ${USER_SERVICE_URL:http://localhost:8081/api/v1/user}
+
+microservice:
+  user:
+    url: ${USER_SERVICE_URL:http://localhost:8081}
+
+appdescription: "Microservicio de Trazabilidad de Pedidos (MongoDB) - Pragma Powerup"
+appversion: "1.0.0"
+appDescription: "Microservicio de Trazabilidad de Pedidos (MongoDB) - Pragma Powerup"
+appVersion: "1.0.0"
